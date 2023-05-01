@@ -1,4 +1,4 @@
-const apiKey = "b35f7987efab4cf0ba49cd2dd140b32f";
+const apiKey = process.env.API_CLARIFAI; //"b35f7987efab4cf0ba49cd2dd140b32f";
 
 const handleApiCall = async (req, res) => {
   const response = await fetch(
