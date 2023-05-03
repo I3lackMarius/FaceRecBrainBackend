@@ -20,7 +20,7 @@ const image = require("./controllers/image");
 const db = knex({
   client: "pg",
   connection: {
-    host: process.env.DATABASE_URL, //"localhost",
+    host: process.env.DATABASE_HOST, //"localhost",
     ssl: { rejectUnauthorized: false }, //for online setup only
     port: 5432, //for online setup only
     user: process.env.DATABASE_USER, //"postgres",
