@@ -29,15 +29,15 @@ const db = knex({
   },
 });
 
-console.log("debug:", process.env.DATABASE_URL);
-console.log(
-  db
-    .select("*")
-    .from("users")
-    .then((data) => {
-      console.log(data);
-    })
-);
+// console.log("debug:", process.env.DATABASE_URL);
+// console.log(
+//   db
+//     .select("*")
+//     .from("users")
+//     .then((data) => {
+//       console.log(data);
+//     })
+// );
 
 const app = express();
 
@@ -68,7 +68,6 @@ const database = {
 app.get("/", (req, res) => {
   // res.send(database.users);
   res.send("success");
-  res.send(process.env.DATABASE_URL);
 });
 
 app.post("/signin", (req, res) => {
