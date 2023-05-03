@@ -16,6 +16,7 @@ const register = require("./controllers/register");
 const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
+const fetch = require("node-fetch");
 
 const db = knex({
   client: "pg",
@@ -87,7 +88,7 @@ app.put("/image", (req, res) => {
 });
 
 app.post("/imageUrl", (req, res) => {
-  image.handleApiCall(req, res);
+  image.handleApiCall(req, res, fetch);
 });
 
 app.listen(3000, () => {

@@ -1,6 +1,6 @@
 const apiKey = process.env.API_CLARIFAI; //"b35f7987efab4cf0ba49cd2dd140b32f";
 
-const handleApiCall = async (req, res) => {
+const handleApiCall = async (req, res, fetch) => {
   const response = await fetch(
     `https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`,
     {
