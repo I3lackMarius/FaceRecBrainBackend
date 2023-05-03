@@ -7,23 +7,23 @@ const handleApiCall = async (req, res) => {
       method: "POST",
       headers: {
         Accept: "application/json",
-        Authorization: `Key ${apiKey}`,
+        Authorization: `Key ${apiKey}`
       },
       body: JSON.stringify({
         user_app_id: {
           user_id: "clarifai",
-          app_id: "main",
+          app_id: "main"
         },
         inputs: [
           {
             data: {
               image: {
-                url: req.body.input, //"https://images.healthshots.com/healthshots/en/uploads/2023/01/18175821/face-glow.jpg",
-              },
-            },
-          },
-        ],
-      }),
+                url: req.body.input //"https://images.healthshots.com/healthshots/en/uploads/2023/01/18175821/face-glow.jpg",
+              }
+            }
+          }
+        ]
+      })
     }
   )
     .then((response) => response.json())
