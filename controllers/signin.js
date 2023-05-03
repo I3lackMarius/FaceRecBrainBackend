@@ -28,7 +28,7 @@ const handleSignin = (req, res, db, bcrypt) => {
     .from("login")
     .where("email", "=", email)
     .then((data) => {
-      const isValid = bcrypt.compareSync(password, data[0].hash);
+      const isValid = password === data[0].hash ? true : false; //bcrypt.compareSync(password, data[0].hash);
       // console.log(isValid);
       if (isValid) {
         return db
