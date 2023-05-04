@@ -68,7 +68,7 @@ const database = {
 
 app.get("/", (req, res) => {
   // res.send(database.users);
-  res.send("success");
+  res.json("success");
 });
 
 app.post("/signin", (req, res) => {
